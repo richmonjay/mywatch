@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.buttonText {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.buttonText::before {
+    content:"";
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-110%);
+    transition: transform  ease-out 0.3s;
+}
+
+.buttonText:hover::before {
+    transform: translateX(0)
+}
+
+.imageSetBg{
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.imageSetBg::before {
+    content: "";
+    position: absolute;
+    background-image: inherit;
+    height: 100%;
+    width: 100%;
+
+    background-position: center;
+    transform: scale(5);
+    filter: blur(5px);
+    background-size: cover;
+    z-index: 0;
+}
+
+.my-image{
+    z-index: 20;
+    transition: ease-out 2s;
+}
+
+
+.fixScroll {
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.my-image:hover {
+    transform: scale(1.2);
+}
