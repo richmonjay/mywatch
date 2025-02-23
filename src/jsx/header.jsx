@@ -20,7 +20,7 @@ function header() {
    window.addEventListener("scroll", handleScroll);
    console.log(window.addEventListener("scroll", handleScroll));
    
-   let headerClass = `sticky z-[999] top-0 w-full bg-white h-24 shadow-custom flex  w-full ease-out duration-300 ${headerScroll ? 'translate-y-[0]' : 'translate-y-[-100%]'}`;
+   let headerClass = `sticky z-[999] top-0 w-full bg-gray-100 h-24 shadow-custom flex  w-full ease-out duration-300 ${headerScroll ? 'translate-y-[0]' : 'translate-y-[-100%]'}`;
 
    return(
    <header className={headerClass}>

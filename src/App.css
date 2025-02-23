@@ -5,14 +5,29 @@
     /* border: 1px solid red; */
 }
 
+
+@font-face {
+    font-family: 'rjfont';
+    src: url(../public/fonts/Inter_Tight/static/InterTight-Light.ttf) format('truetype')
+}
+
 body {
     overflow-y: auto;
     height: 100vh;
+    font-family: 'rjfont';
+    
 }
 
 body::-webkit-scrollbar {
     width: 0;
+    height: 0;
 }
+
+.imgaes::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
 
 .buttonText {
     position: relative;
@@ -75,4 +90,17 @@ body::-webkit-scrollbar {
 
 .my-image:hover {
     transform: scale(1.2);
+}
+
+.landingBg {
+    background-image: url(./images/watches.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingText {
+    @apply font-bold text-center text-landingSize;
 }

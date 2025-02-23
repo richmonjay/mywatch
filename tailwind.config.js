@@ -13,6 +13,7 @@ export default {
       },
       fontSize: {
         custom: '.8rem',
+        landingSize: '3rem'
       },
       colors: {
         customColor: '#c39052'
